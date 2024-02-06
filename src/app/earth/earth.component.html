@@ -1,0 +1,178 @@
+<app-header></app-header>
+<!-- <div class="">
+    <div class="row d-flex justify-content-around align-items-center">
+
+
+
+        <div class="col-md-6 ">
+            <div class="p-3 ">
+                <div class="d-flex justify-content-center align-items-center m-1">
+
+                    <img src="../../assets/earth2.png" width="50%" class="Earth  shadow-sm p-3">
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="col-md-6 d-flex m-0">
+            <div class="" id="Earth-info">
+                <h3 class="h3 ">Earth</h3>
+                <span class="p-1">
+                    <p class="col-md-6 mt-1">Third Planent from the Sun and the only known planet to harbar life.
+                        About 29.2% of Earth's surface is land with remaining 70.8% is covered
+                        with water. Earth's distance from the Sun. physical properties and
+                        Geological history have allowed life to evolve and thrive.
+                    </p>
+                </span>
+                <div class="d-flex justify-content-start">
+
+                    <a href="">source:</a>
+                    <span class="ms-3">wikipedia</span>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="row ">
+        <div class="d-flex justify-content-center ms-5">
+
+            <div class="row ms-5" id="eath-view">
+                <span class="eath-view  m-2">dfdf</span>
+                <span class=" eath-view  m-2">dfdf</span>
+                <span class=" eath-view m-2">dfdf</span>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div> -->
+
+
+
+<!-- Earth  -->
+<div class="row d-flex justify-content-evenly align-items-center">
+
+    <!-- Earth Image -->
+    <div class="col-md-6">
+
+        <div class="d-flex justify-content-center align-items-center">
+
+
+            <!-- <img src="../../assets/earth2.png" class="Earth-img ms-3  shadow-sm p-3" *ngIf="!img">
+
+
+            <img src="../../assets/pngegg (1).png" class="Earth-img ms-3  shadow-sm p-3" *ngIf="img"> -->
+
+            <div [ngSwitch]="viewMode">
+
+                <div class="d-flex justify-content-center align-items-center">
+                    <img *ngSwitchCase="'map'" src="../../assets/earth2.png" class="Earth-img ms-3  shadow-sm p-3"
+                        style="width: 320px">
+
+
+                    <img *ngSwitchCase="'gap'" src="../../assets/e2.png" class="Earth-img ms-3  shadow-sm p-3"
+                        style="width: 45%;">
+
+                    <img *ngSwitchCase="'val'" src="../../assets/e3.png" class="Earth-img ms-3  shadow-sm p-3"
+                        style="width: 45%;">
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <!-- <img src="../../assets/pngegg (2).png" class="Earth-img ms-3  shadow-sm p-3" *ngIf="img"> -->
+        </div>
+
+    </div>
+
+    <!-- Earth-content -->
+    <div class=" Earth-content col-md-6">
+        <!-- <div class="align-items-center"> -->
+        <div class="">
+            <h3 class="h1">Earth</h3>
+        </div>
+        <span class="p-1">
+            <p class="col-md-6 mt-1">Third Planent from the Sun and the only known planet to harbar life.
+                About 29.2% of Earth's surface is land with remaining 70.8% is covered
+                with water. Earth's distance from the Sun. physical properties and
+                Geological history have allowed life to evolve and thrive.
+            </p>
+        </span>
+        <div class="d-flex justify-content-start">
+
+            <a href="">source:</a>
+            <span class="ms-3" style="font-family:Hind;">wikipedia</span>
+        </div>
+        <!-- </div> -->
+
+
+
+    </div>
+
+
+</div>
+<div class="row  d-flex justify-content-evenly align-items-center">
+
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+        <!-- <div [ngSwitch]="viewMode">
+            <div *ngSwitchCase="'map'" class="event text-center p-2 m-3">overview</div>
+            <div *ngSwitchCase="'gap'" class="event text-center p-2 m-3">internel structture</div><br>
+            <div *ngSwitchCase="'val'" class="event text-center p-2 m-3">surface geology</div>
+
+
+        </div> -->
+
+        <div [class.active]="viewMode=='map'"> <span (click)="viewMode='map'"
+                class="event text-center p-2 m-3">overview</span>
+        </div>
+        <div [class.active]="viewMode=='gap'"> <span (click)="viewMode='gap'" class="event text-center p-2 m-3">internel
+                structture</span>
+        </div>
+        <div [class.active]="viewMode=='val'"> <span (click)="viewMode='val'" class="event text-center p-2 m-3">surface
+                geology</span></div>
+
+
+
+    </div>
+</div>
+
+<div class="row p-3">
+    <div class="eath-value d-flex justify-content-evenly align-items-center m-2 border-0 ">
+        <span class="border  border-secondary p-3 text-center">
+            <p>rotation time</p> 0.99 days
+        </span>
+        <span class="border  border-secondary p-3 text-center">
+            <p>revolution time</p> 365.26 days
+        </span>
+        <span class="border  border-secondary p-3 text-center">
+            <p>radius</p> 6.371 km
+        </span>
+        <span class="border  border-secondary p-3 text-center">
+            <p>average temp</p> 16 °c
+        </span>
+    </div>
+</div>
